@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MC.ContactLessDining.Models.MenuCategory>
+
+@{
+    ViewBag.Title = "Kategori Menu - Meat Compiler";
+}
+
+<h2>Kategori Menu</h2>
+
+<ul class="list-group list-group-flush">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            <a href="/menu/detail/@item.Id">
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </a>
+        </li>
+    }
+
+</ul>
+
+<div class="col-md-4" style="margin-top:30px;">    
+    <p><i>Harga excl. pajak daerah 10% dan service charge 5%</i></p>
+</div>

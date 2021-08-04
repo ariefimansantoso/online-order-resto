@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MC.ContactLessDining", "MC.ContactLessDining.csproj", "{78E67691-1D1C-4B90-BB66-8FD7216899B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MC.ContactLessDining.Tests", "..\MC.ContactLessDining.Tests\MC.ContactLessDining.Tests.csproj", "{87118E33-4FC3-4463-803D-5E35470A9970}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78E67691-1D1C-4B90-BB66-8FD7216899B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E67691-1D1C-4B90-BB66-8FD7216899B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E67691-1D1C-4B90-BB66-8FD7216899B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E67691-1D1C-4B90-BB66-8FD7216899B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87118E33-4FC3-4463-803D-5E35470A9970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87118E33-4FC3-4463-803D-5E35470A9970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87118E33-4FC3-4463-803D-5E35470A9970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87118E33-4FC3-4463-803D-5E35470A9970}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30D97140-3AF1-4D3D-AC78-89DEAED35460}
+	EndGlobalSection
+EndGlobal

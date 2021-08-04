@@ -1,0 +1,11 @@
+﻿@model MC.ContactLessDining.ViewModels.CartIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Keranjang Belanja</h2>
+
+<div>
+    @{Html.RenderPartial("_CartDetail", Model.ShoppingCartItems);}
+</div>

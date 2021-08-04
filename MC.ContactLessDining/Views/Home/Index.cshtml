@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MC.ContactLessDining.Models.MenuCard>
+
+@{
+    ViewBag.Title = "Meat Compiler - Contactless Menu";
+}
+
+<div class="jumbotron">
+    <h1>Meat Compiler</h1>
+    <p class="lead">Selamat datang di era new normal bersama Meat Compiler. Dibawah ini adalah menu-menu best seller kami.</p>    
+</div>
+
+
+<div class="row">
+    
+    <div class="col-md-4">
+        <h1>Best Sellers</h1>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <h2>@item.Name</h2>
+            <img class="img-thumbnail" src="@item.ImageUrl-Thumb.png" style="width:100px; float:left; margin-right: 10px;" data-menuname="@item.Name" data-image="@(item.ImageUrl + ".png")" />
+            <p>
+                @item.MenuDescription
+            </p>
+            <div style="font-size:24px; text-align: right; margin-right: 5px;">
+                <strong>@string.Format("{0:n0}", (item.Price * (decimal)1000))</strong>
+            </div>
+        </div>
+    }
+
+    <div class="col-md-4" style="margin-top: 20px;">
+        <p><a href="/Menu" class="btn btn-primary btn-lg">Lihat Menu Lengkap &raquo;</a></p>
+    </div>
+    <div class="col-md-4" style="margin-top:30px;">        
+        <p><i>Harga excl. pajak daerah 10% dan service charge 5%</i></p>
+    </div>
+</div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="modalImage">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="imgPhoto" style="width:100%;" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section scripts {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".img-thumbnail").click(function () {
+                    var imageUrl = $(this).attr("data-image");
+                    var menuName = $(this).attr("data-menuname");
+
+                    $("#imgPhoto").attr("src", imageUrl);
+                    $("#modalTitle").text(menuName);
+                    $("#modalImage").modal("show");
+                });
+            });
+        </script>
+    }

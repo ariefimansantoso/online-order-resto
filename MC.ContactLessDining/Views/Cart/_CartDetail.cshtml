@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MC.ContactLessDining.ViewModels.CartItemViewModel>
+
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="row-md-12" style="text-align:center;">
+                <img class="img-thumbnail" src="@item.ImageUrl-Thumb.png" style="width:90%; margin-top: 20px;" data-menuname="@item.Name" data-image="@(item.ImageUrl + ".png")" />
+            </div>
+        </div>
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">@item.Name</h5>
+            @if (item.IsSteak)
+            {
+                <small>@item.Doneness | @item.Potato | @item.Sauce</small>
+            }
+        </div>
+        <div>
+            <small><strong>@string.Format("{0:n0}", item.SubTotal)</strong></small>
+        </div>
+    }
+</div>

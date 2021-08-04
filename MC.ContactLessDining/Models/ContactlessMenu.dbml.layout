@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ContactlessMenu">
+  <DataContextMoniker Name="/ContactlessMenuDataContext" />
+  <nestedChildShapes>
+    <classShape Id="81c07319-3f64-4c58-b9e7-f55c11c22ea8" absoluteBounds="3.5, 1, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/ContactlessMenuDataContext/MenuCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7a3e09e-7462-46e6-b3e9-a4e748f0ccd4" absoluteBounds="3.515, 1.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d93cf8e-2a84-4de1-bd4d-428c5fa59ac4" absoluteBounds="0.75, 1.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ContactlessMenuDataContext/MenuCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ade246e-94b6-4468-af45-9e7b1dd9f447" absoluteBounds="0.765, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.41429768880208); (3.5 : 2.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ContactlessMenuDataContext/MenuCategory/MenuCategory_MenuCard" />
+      <nodes>
+        <classShapeMoniker Id="6d93cf8e-2a84-4de1-bd4d-428c5fa59ac4" />
+        <classShapeMoniker Id="81c07319-3f64-4c58-b9e7-f55c11c22ea8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21ae09cb-22f4-4105-972e-16d05aaea01b" absoluteBounds="3.5, 5, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/ContactlessMenuDataContext/ShoppingCart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0136088f-4ac9-47fb-80e9-567c0816a2fa" absoluteBounds="3.515, 5.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f82a228f-136d-43ef-9001-59839a10ece6" absoluteBounds="7, 1.875, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ContactlessMenuDataContext/ShoppingCartItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c9ac892-331c-4abe-a52e-0d1c7f93709f" absoluteBounds="7.015, 2.335, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.89985270182292); (7 : 2.89985270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ContactlessMenuDataContext/MenuCard/MenuCard_ShoppingCartItem" />
+      <nodes>
+        <classShapeMoniker Id="81c07319-3f64-4c58-b9e7-f55c11c22ea8" />
+        <classShapeMoniker Id="f82a228f-136d-43ef-9001-59839a10ece6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.65065805208333); (8 : 6.65065805208333); (8 : 5.37660970052083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ContactlessMenuDataContext/ShoppingCart/ShoppingCart_ShoppingCartItem" />
+      <nodes>
+        <classShapeMoniker Id="21ae09cb-22f4-4105-972e-16d05aaea01b" />
+        <classShapeMoniker Id="f82a228f-136d-43ef-9001-59839a10ece6" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
